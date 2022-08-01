@@ -4,7 +4,7 @@
   &__container {
     word-wrap: break-word;
     width: min(95%, 60.6rem);
-    @media(max-width: 1200px){
+    @media (max-width: 1200px) {
       margin: 0 auto;
     }
   }
@@ -31,37 +31,37 @@
     &-handle {
       position: absolute;
       background-color: $color-orange;
-      height: .8rem;
+      height: 0.8rem;
       left: 0;
       transform: translateY(-50%);
       border-radius: 100rem;
       transition: 0.4s ease;
     }
   }
-  &__slide{
-    display:none;
+  &__slide {
+    display: none;
     min-height: 27rem;
-    &-text{
-        font-size: 1.8rem;
-        color: $color-text-700;
+    &-text {
+      font-size: 1.8rem;
+      color: $color-text-700;
     }
-    &-text.part1{
-        margin-bottom: 3rem;
+    &-text.part1 {
+      margin-bottom: 3rem;
     }
-    &-text.part2{
-        margin-bottom: 2.4rem;
+    &-text.part2 {
+      margin-bottom: 2.4rem;
     }
   }
   //ANIMATION
-  &__slide.active{
+  &__slide.active {
     display: block;
   }
-  &__slides{
+  &__slides {
     visibility: hidden;
     opacity: 0;
     transition: all 300ms;
   }
-  &__slides.active{
+  &__slides.active {
     visibility: visible;
     opacity: 1;
   }

@@ -9,27 +9,26 @@ main {
   background-image: url("../assets/headphones-background2-2x.png");
   background-size: cover;
   padding-block: 26.9rem;
-  @media(max-width: 1300px){
+  @media (max-width: 1300px) {
     background-position: right;
   }
-  @media(max-width: 1200px){
+  @media (max-width: 1200px) {
     background-image: radial-gradient(#a5f0ff, #35adc4);
   }
-
 }
 .ad {
   background-image: url("../assets/person-background-2x.png");
   background-size: cover;
   padding-block: 25rem;
-  @media(max-width: 1200px){
-    background-image: radial-gradient(#fff6eb ,#c7b39b);
+  @media (max-width: 1200px) {
+    background-image: radial-gradient(#fff6eb, #c7b39b);
   }
-  &__container{
+  &__container {
     display: flex;
     flex-direction: row-reverse;
     width: min(130.5rem, 95%);
     margin: 0 auto;
-    @media(max-width: 1200px){
+    @media (max-width: 1200px) {
       justify-content: center;
     }
   }
@@ -38,11 +37,11 @@ main {
   width: min-content;
   &__heading {
     font-size: 5rem;
-    
+
     line-height: 6rem;
     white-space: nowrap;
-    
-    @media(max-width: 400px){
+
+    @media (max-width: 400px) {
       font-size: 4rem;
       line-height: 5rem;
     }
@@ -63,13 +62,13 @@ main {
   padding-top: 12.8rem;
   padding-bottom: 11rem;
 
-  &__link{
+  &__link {
     text-decoration: none;
     color: $color-black;
     transition: all 300ms;
     border-radius: 3rem;
     outline: 1px solid transparent;
-    &:hover{
+    &:hover {
       outline: 1px solid $color-grey-600;
     }
   }
@@ -141,20 +140,20 @@ main {
 }
 .ordering {
   display: flex;
-    gap: 2rem;
+  gap: 2rem;
   width: min(72%, 136rem);
-  @media(max-width: 1100px){
+  @media (max-width: 1100px) {
     justify-content: center;
-}
+  }
 
   &__img {
     max-width: 67rem;
     align-self: center;
-    @media(max-width: 1100px){
-        display: none;
+    @media (max-width: 1100px) {
+      display: none;
     }
   }
-  &__form{
+  &__form {
     width: min(39.4rem, 100%);
   }
   & .input-group {
@@ -180,7 +179,7 @@ main {
     border-radius: 4px;
     background-color: $color-background-grey-dark;
     padding: 1rem 1rem;
-    &:focus-visible{
+    &:focus-visible {
       outline: none;
     }
   }

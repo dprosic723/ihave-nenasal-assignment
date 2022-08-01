@@ -7,21 +7,23 @@
   padding-block: 3.8rem;
   z-index: 900;
   transition: all 300ms;
-  background-color: rgba($color-background-grey-dark,0);
-  &.active{
-    background-color: rgba($color-background-grey-dark,0.95);
+  background-color: rgba($color-background-grey-dark, 0);
+  &.active {
+    background-color: rgba($color-background-grey-dark, 0.95);
   }
-  @media(max-width: 1300px){background-color: rgba($color-background-grey-dark,0.95);}
+  @media (max-width: 1300px) {
+    background-color: rgba($color-background-grey-dark, 0.95);
+  }
   //
 
-  &__container{
+  &__container {
     display: flex;
     justify-content: space-between;
   }
   &__logo {
     max-height: 5rem;
   }
-  &__links{
+  &__links {
     display: flex;
     gap: 28.8rem;
   }
@@ -38,17 +40,17 @@
       color: inherit;
       text-decoration: none;
     }
-    @media(max-width: 1200px){
+    @media (max-width: 1200px) {
       display: none;
     }
   }
   &__link {
     color: $color-text-700;
-    letter-spacing: .072rem;
+    letter-spacing: 0.072rem;
     text-transform: uppercase;
-    transition:all .2s;
-    &:hover{
-        color: $color-orange;
+    transition: all 0.2s;
+    &:hover {
+      color: $color-orange;
     }
   }
 
@@ -58,23 +60,23 @@
     margin-left: auto;
   }
   &__icon {
-    background:none;
+    background: none;
     max-width: 2.4rem;
-    transition: all .2s;
+    transition: all 0.2s;
   }
   &__icon:first-child {
     max-height: 2.4rem;
   }
-  &__button{
+  &__button {
     background: none;
     transition: transform 200ms;
-    &:hover{
-    transform: scale(1.4);
-  }
+    &:hover {
+      transform: scale(1.4);
+    }
   }
 
   //MOBILE
-  &__mobile{
+  &__mobile {
     transform: translateY(-200%);
     position: fixed;
     left: 0;
@@ -84,12 +86,14 @@
     padding-bottom: 1rem;
     visibility: hidden;
     opacity: 0;
-    transition:all 300ms;
+    transition: all 300ms;
     z-index: 3;
 
-    & a{text-decoration: none;
-    color: $color-black}
-    &-menu{
+    & a {
+      text-decoration: none;
+      color: $color-black;
+    }
+    &-menu {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -97,27 +101,26 @@
       padding: 0;
       margin: 0;
     }
-    &-link{
-      font-family: 'Roboto', sans-serif;
+    &-link {
+      font-family: "Roboto", sans-serif;
       font-weight: 300;
-  
-      letter-spacing: .2rem;
+
+      letter-spacing: 0.2rem;
       width: 100%;
       font-size: 1.7rem;
       padding: 1rem;
       text-align: center;
     }
-    &-link:last-child{
+    &-link:last-child {
       border: none;
     }
-    &.active{
+    &.active {
       transform: translate(0);
       visibility: visible;
       opacity: 1;
     }
-    @media(min-width: 1201px){
+    @media (min-width: 1201px) {
       display: none;
     }
   }
-
 }

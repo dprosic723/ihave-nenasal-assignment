@@ -1,7 +1,7 @@
 @use "../abstracts/colors" as *;
 
 .footer {
-  &__container{
+  &__container {
     background-color: $color-background-grey-light;
     padding-block: 13rem 13.2rem;
   }
@@ -9,7 +9,7 @@
     display: flex;
     gap: 12.8rem;
     width: min(100%, 135.3rem);
-    @media(max-width: 800px){
+    @media (max-width: 800px) {
       display: grid;
       grid-template-columns: repeat(auto-fit, 175px);
       margin: 0 auto;
@@ -20,66 +20,65 @@
   &__credits {
     background-color: $color-background-grey-dark;
     padding-block: 4rem;
-    &-text{
-        line-height: 2.2rem;
+    &-text {
+      line-height: 2.2rem;
     }
   }
-  &__contact{
+  &__contact {
     flex: 1;
-    &-phone{
-        display: flex;
-        gap: .8rem;
-        & p{
+    &-phone {
+      display: flex;
+      gap: 0.8rem;
+      & p {
         font-size: 1.2rem;
+      }
     }
+    & img {
+      max-width: 4rem;
+      max-height: 4rem;
     }
-    & img{
-        max-width: 4rem;
-        max-height: 4rem;
-    }
-    @media(max-width: 800px){
+    @media (max-width: 800px) {
       align-items: center;
     }
-  } 
-  
-  & ul{
+  }
+
+  & ul {
     list-style-type: none;
     padding: 0;
   }
-  & a:hover{
+  & a:hover {
     color: $color-orange;
   }
-  & a, 
-  & li{
-    font-family: 'Roboto', sans-serif;
+  & a,
+  & li {
+    font-family: "Roboto", sans-serif;
     font-size: 1.8rem;
     line-height: 2.2rem;
     text-decoration: none;
     color: $color-text-700;
   }
-  & li{
+  & li {
     margin-bottom: 1.6rem;
   }
-  &__heading{
+  &__heading {
     font-weight: 500;
-    margin-bottom: .6rem;
+    margin-bottom: 0.6rem;
   }
-  &__social{
-    &-icons{
-        display: flex;
-        gap:.8rem;
-        margin-top: 1rem;
-        margin-bottom: 4.4rem;
+  &__social {
+    &-icons {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 1rem;
+      margin-bottom: 4.4rem;
     }
-    &-icon{
-        max-width: 2.4rem;
+    &-icon {
+      max-width: 2.4rem;
     }
-    & img{
-        max-width: 12rem;
+    & img {
+      max-width: 12rem;
     }
-    @media(max-width: 800px){
+    @media (max-width: 800px) {
       align-items: center;
     }
   }
 }
-
