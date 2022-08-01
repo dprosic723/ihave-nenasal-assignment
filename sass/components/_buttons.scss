@@ -1,0 +1,37 @@
+@use "../abstracts/colors" as *;
+
+.order-buttons{
+    display: flex;
+    gap: 2.4rem;
+    &__buy{
+        color: $color-white;
+        background-color: $color-orange;
+        padding: 1.6rem 8rem;
+        transition: all 200ms;
+        &:hover{
+            color: $color-orange;
+            background-color: $color-white;
+            outline: 1px solid $color-orange;
+            transform: translateY(-.5rem);
+        }
+    }
+    &__add-to-cart{
+        color: $color-orange;
+        background-color: $color-background-grey-light;
+        border: 1px solid $color-orange;
+        padding: 1.6rem 4rem;
+        transition: all 200ms;
+        &:hover{
+            color: $color-white;
+            background-color: $color-orange;
+            transform: translateY(-.5rem);
+        }
+    }
+    &__buy,
+    &__add-to-cart{
+        font-size: 2.4rem;
+        letter-spacing: 0.144rem;
+        border-radius: .8rem;
+        font-weight: 700;
+    }
+}

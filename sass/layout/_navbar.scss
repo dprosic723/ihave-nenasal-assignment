@@ -1,0 +1,123 @@
+@use "../abstracts/colors" as *;
+
+.nav {
+  //BACKGROUND
+  position: fixed;
+  width: 100%;
+  padding-block: 3.8rem;
+  z-index: 900;
+  transition: all 300ms;
+  background-color: rgba($color-background-grey-dark,0);
+  &.active{
+    background-color: rgba($color-background-grey-dark,0.95);
+  }
+  @media(max-width: 1300px){background-color: rgba($color-background-grey-dark,0.95);}
+  //
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    max-height: 5rem;
+  }
+  &__links{
+    display: flex;
+    gap: 28.8rem;
+  }
+  &__links-left {
+    font-size: 1.8rem;
+    font-weight: 500;
+    display: flex;
+    gap: 4.8rem;
+    margin: 1.9rem 0 0 0;
+    padding: 0;
+    height: 100%;
+    list-style-type: none;
+    & a {
+      color: inherit;
+      text-decoration: none;
+    }
+    @media(max-width: 1200px){
+      display: none;
+    }
+  }
+  &__link {
+    color: $color-text-700;
+    letter-spacing: .072rem;
+    text-transform: uppercase;
+    transition:all .2s;
+    &:hover{
+        color: $color-orange;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 3.25rem;
+    margin-left: auto;
+  }
+  &__icon {
+    background:none;
+    max-width: 2.4rem;
+    transition: all .2s;
+  }
+  &__icon:first-child {
+    max-height: 2.4rem;
+  }
+  &__button{
+    background: none;
+    transition: transform 200ms;
+    &:hover{
+    transform: scale(1.4);
+  }
+  }
+
+  //MOBILE
+  &__mobile{
+    transform: translateY(-200%);
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: $color-background-grey-dark;
+    padding-top: 12rem;
+    padding-bottom: 1rem;
+    visibility: hidden;
+    opacity: 0;
+    transition:all 300ms;
+    z-index: 3;
+
+    & a{text-decoration: none;
+    color: $color-black}
+    &-menu{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    &-link{
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+  
+      letter-spacing: .2rem;
+      width: 100%;
+      font-size: 1.7rem;
+      padding: 1rem;
+      text-align: center;
+    }
+    &-link:last-child{
+      border: none;
+    }
+    &.active{
+      transform: translate(0);
+      visibility: visible;
+      opacity: 1;
+    }
+    @media(min-width: 1201px){
+      display: none;
+    }
+  }
+
+}

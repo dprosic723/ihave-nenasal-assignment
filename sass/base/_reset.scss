@@ -1,0 +1,102 @@
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Change rem to px ratio*/
+html{
+    font-size: 62.5%;
+
+    @media (max-width:1800px) {
+      font-size: 55%;
+    }
+    @media (max-width:1600px) {
+      font-size: 50%;
+    }
+    @media (max-width:1500px) {
+      font-size: 47.5%;
+    }
+    @media (max-width:1400px) {
+      font-size: 45%;
+    }
+    @media (max-width:900px) {
+      font-size: 40%;
+    }
+    @media (max-width:500px) {
+      font-size: 35%;
+    }
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  width: 100%;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture { 
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input{
+  font: inherit;
+}
+
+button {
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    &:hover{
+        background:none;
+    }
+  }
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

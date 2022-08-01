@@ -1,0 +1,202 @@
+@use "../abstracts/colors" as *;
+
+section,
+main {
+  width: 100%;
+}
+
+.info {
+  background-image: url("../assets/headphones-background2-2x.png");
+  background-size: cover;
+  padding-block: 26.9rem;
+  @media(max-width: 1300px){
+    background-position: right;
+  }
+  @media(max-width: 1200px){
+    background-image: radial-gradient(#a5f0ff, #35adc4);
+  }
+
+}
+.ad {
+  background-image: url("../assets/person-background-2x.png");
+  background-size: cover;
+  padding-block: 25rem;
+  @media(max-width: 1200px){
+    background-image: radial-gradient(#fff6eb ,#c7b39b);
+  }
+  &__container{
+    display: flex;
+    flex-direction: row-reverse;
+    width: min(130.5rem, 95%);
+    margin: 0 auto;
+    @media(max-width: 1200px){
+      justify-content: center;
+    }
+  }
+}
+.about {
+  width: min-content;
+  &__heading {
+    font-size: 5rem;
+    
+    line-height: 6rem;
+    white-space: nowrap;
+    
+    @media(max-width: 400px){
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+  }
+  &__text {
+    margin-top: 2.4rem;
+    margin-bottom: 4rem;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    word-wrap: break-word;
+  }
+}
+
+.related {
+  width: 100%;
+  background-color: $color-background-grey-light;
+  scroll-margin-top: 10rem;
+  padding-top: 12.8rem;
+  padding-bottom: 11rem;
+
+  &__link{
+    text-decoration: none;
+    color: $color-black;
+    transition: all 300ms;
+    border-radius: 3rem;
+    outline: 1px solid transparent;
+    &:hover{
+      outline: 1px solid $color-grey-600;
+    }
+  }
+
+  &__container-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__about {
+    max-width: 60rem;
+    margin-bottom: 6.4rem;
+  }
+  &__heading {
+    text-align: center;
+    font-size: 5rem;
+    line-height: 7.4rem;
+    margin-bottom: 2.4rem;
+  }
+  &__info {
+    word-wrap: break-word;
+    text-align: center;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 39.4rem);
+    grid-auto-rows: min-content;
+    grid-gap: 2rem;
+    width: 100%;
+    justify-content: center;
+  }
+  &__headphones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-img {
+      max-width: 39.4rem;
+      margin-bottom: 2.4rem;
+    }
+    &-title {
+      font-size: 3.6rem;
+      font-weight: 500;
+      line-height: 5.3rem;
+      margin-bottom: 1.6rem;
+    }
+    &-price {
+      font-family: "Oswald", sans-serif;
+      font-size: 5rem;
+      line-height: 7.4rem;
+      font-weight: 200;
+      color: $color-orange;
+    }
+  }
+}
+
+.order-ready {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 12.8rem;
+  background-color: $color-background-grey-dark;
+  &__heading {
+    font-size: 5rem;
+    line-height: 7.4rem;
+    text-align: center;
+    margin-bottom: 9.6rem;
+  }
+}
+.ordering {
+  display: flex;
+    gap: 2rem;
+  width: min(72%, 136rem);
+  @media(max-width: 1100px){
+    justify-content: center;
+}
+
+  &__img {
+    max-width: 67rem;
+    align-self: center;
+    @media(max-width: 1100px){
+        display: none;
+    }
+  }
+  &__form{
+    width: min(39.4rem, 100%);
+  }
+  & .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  & label {
+    font-family: "Roboto", sans-serif;
+    color: $color-text-700;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+    margin-bottom: 4px;
+  }
+  & input,
+  & textarea {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    color: $color-text-800;
+    font-size: 2.2rem;
+    border: 1px solid $color-text-700;
+    border-radius: 4px;
+    background-color: $color-background-grey-dark;
+    padding: 1rem 1rem;
+    &:focus-visible{
+      outline: none;
+    }
+  }
+  & button {
+    width: 100%;
+    margin-top: 4rem;
+    margin-bottom: 1.6rem;
+  }
+  &__safe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1.2rem;
+  }
+  &__safe-img {
+    display: inline;
+  }
+}
